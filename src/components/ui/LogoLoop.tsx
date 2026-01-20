@@ -102,7 +102,7 @@ export const LogoLoop = memo(({ logos, speed = 80, logoHeight = 40, gap = 60 }: 
   return (
     <div 
       ref={containerRef}
-      className="relative w-full overflow-hidden group py-16"
+      className="relative w-full overflow-hidden group py-12 md:py-20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false);

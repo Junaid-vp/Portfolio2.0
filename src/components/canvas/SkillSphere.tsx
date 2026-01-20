@@ -50,9 +50,9 @@ function Word({ children, icon, position }: { children: string; icon: string; po
             <img 
                 src={`https://cdn.simpleicons.org/${icon}`} 
                 alt={children}
-                className={`w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-lg`}
+                className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-lg"
             />
-            <span className={`text-[10px] sm:text-sm md:text-lg font-bold tracking-wide ${hovered ? 'scale-105 text-white' : 'text-zinc-400'} transition-colors`}>
+            <span className={`text-[8px] sm:text-xs md:text-lg font-bold tracking-wide ${hovered ? 'scale-105 text-white' : 'text-zinc-400'} transition-colors`}>
                 {children}
             </span>
         </div>

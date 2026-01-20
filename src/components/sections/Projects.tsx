@@ -82,33 +82,40 @@ export default function Projects() {
                 </p>
             </div>
             
-            {projects.map((project) => (
-                <a 
-                    key={project.id} 
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative h-[250px] sm:h-[300px] w-full overflow-hidden rounded-xl bg-card shrink-0 border border-muted"
-                >
-                    <Image 
-                        src={project.image} 
-                        alt={project.title} 
-                        fill 
-                        unoptimized
-                        className="object-cover opacity-70"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <div className="flex items-center justify-between mb-2">
-                             <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-900/30 px-2 py-1 rounded-sm backdrop-blur-sm border border-purple-500/30">
-                                 {project.category}
-                             </span>
+            {projects.map((project) => {
+                const isLink = project.link && project.link !== "#";
+                const CardWrapper = isLink ? 'a' : 'div';
+                
+                return (
+                    <CardWrapper 
+                        key={project.id} 
+                        {...(isLink ? {
+                            href: project.link,
+                            target: "_blank",
+                            rel: "noopener noreferrer"
+                        } : {})}
+                        className={`group relative h-[250px] sm:h-[300px] w-full overflow-hidden rounded-xl bg-card shrink-0 border border-muted ${isLink ? 'cursor-pointer' : 'cursor-default'}`}
+                    >
+                        <Image 
+                            src={project.image} 
+                            alt={project.title} 
+                            fill 
+                            unoptimized
+                            className="object-cover opacity-70"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-6">
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 bg-purple-900/30 px-2 py-1 rounded-sm backdrop-blur-sm border border-purple-500/30">
+                                    {project.category}
+                                </span>
+                            </div>
+                            <h3 className="text-2xl font-black text-white mb-2 uppercase leading-none tracking-tight">{project.title}</h3>
+                            <p className="text-xs text-gray-300 line-clamp-2">{project.description}</p>
                         </div>
-                        <h3 className="text-2xl font-black text-white mb-2 uppercase leading-none tracking-tight">{project.title}</h3>
-                        <p className="text-xs text-gray-300 line-clamp-2">{project.description}</p>
-                    </div>
-                </a>
-            ))}
+                    </CardWrapper>
+                );
+            })}
       </div>
 
       {/* DESKTOP VIEW (Horizontal Scroll) */}
@@ -124,42 +131,49 @@ export default function Projects() {
                 </p>
             </div>
 
-          {projects.map((project) => (
-            <a 
-                key={project.id} 
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative h-[350px] w-[500px] overflow-hidden rounded-xl bg-card shrink-0 border border-muted hover:border-purple-500 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
-            >
-              <Image 
-                src={project.image} 
-                alt={project.title} 
-                fill 
-                unoptimized
-                className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-50"
-              />
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-              
-              <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                 <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold uppercase tracking-widest text-purple-400 bg-purple-900/30 px-3 py-1 rounded-sm backdrop-blur-sm border border-purple-500/30">
-                        {project.category}
-                    </span>
-                 </div>
-                 <h3 className="text-4xl font-black text-white mb-3 uppercase leading-none tracking-tight">{project.title}</h3>
-                 <p className="text-sm text-gray-300 line-clamp-2 max-w-[90%] group-hover:text-white transition-colors">{project.description}</p>
-                 
-                 {project.link !== "#" && (
-                    <div className="mt-6 flex items-center gap-2 text-white font-bold tracking-widest uppercase text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="border-b border-purple-500 pb-0.5">Explore Project</span> 
-                        <span>→</span>
-                    </div>
-                 )}
-              </div>
-            </a>
-          ))}
+          {projects.map((project) => {
+            const isLink = project.link && project.link !== "#";
+            const CardWrapper = isLink ? 'a' : 'div';
+
+            return (
+                <CardWrapper 
+                    key={project.id} 
+                    {...(isLink ? {
+                        href: project.link,
+                        target: "_blank",
+                        rel: "noopener noreferrer"
+                    } : {})}
+                    className={`group relative h-[350px] w-[500px] overflow-hidden rounded-xl bg-card shrink-0 border border-muted transition-all duration-300 ${isLink ? 'hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer' : 'cursor-default'}`}
+                >
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    unoptimized
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-50"
+                  />
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                  
+                  <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                     <div className="flex items-center justify-between mb-4">
+                        <span className="text-xs font-bold uppercase tracking-widest text-purple-400 bg-purple-900/30 px-3 py-1 rounded-sm backdrop-blur-sm border border-purple-500/30">
+                            {project.category}
+                        </span>
+                     </div>
+                     <h3 className="text-4xl font-black text-white mb-3 uppercase leading-none tracking-tight">{project.title}</h3>
+                     <p className="text-sm text-gray-300 line-clamp-2 max-w-[90%] group-hover:text-white transition-colors">{project.description}</p>
+                     
+                     {isLink && (
+                        <div className="mt-6 flex items-center gap-2 text-white font-bold tracking-widest uppercase text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span className="border-b border-purple-500 pb-0.5">Explore Project</span> 
+                            <span>→</span>
+                        </div>
+                     )}
+                  </div>
+                </CardWrapper>
+            );
+          })}
         </motion.div>
       </div>
     </section>
