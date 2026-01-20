@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import TextReveal from "@/components/ui/TextReveal";
-import ElectricBorder from "@/components/ui/ElectricBorder";
+import TechCard from "@/components/ui/TechCard";
 
 const IMAGES = [
   "https://media.licdn.com/dms/image/v2/D5622AQF4xCW0HMsPIA/feedshare-shrink_800/B56Zs0yjOAG4Ag-/0/1766117233328?e=1770249600&v=beta&t=-mj1GiDyt5hDtxUS_P6LrfOYSj_AkvOw2VzQPR84P0A",
@@ -13,6 +13,8 @@ const IMAGES = [
   "https://media.licdn.com/dms/image/v2/D4E22AQHAX1M9JKXOAA/feedshare-shrink_800/B4EZmTtJydIIAg-/0/1759119718202?e=1770249600&v=beta&t=Vx1Xa0c41n2c52TNcmpJqmLT-Cachh2EN0Z9QxLDCF8",
   "https://media.licdn.com/dms/image/v2/D4E22AQEALyOvYpUo7w/feedshare-shrink_800/B4EZloMQmhHgAg-/0/1758389673959?e=1770249600&v=beta&t=Jdiz1v4Dy9bhAotdCGNnV3Fuw-AyetufcNS83C8Ie64"
 ];
+
+const LABELS = ["IMG_01", "IMG_02", "IMG_03", "IMG_04", "IMG_05", "IMG_06"];
 
 export default function About() {
   return (
@@ -63,22 +65,17 @@ export default function About() {
                         transition={{ delay: idx * 0.1, duration: 0.5 }}
                         className={`relative ${idx % 2 === 0 ? "md:translate-y-8" : "md:-translate-y-8"}`}
                     >
-                        <ElectricBorder 
-                            color="#9333ea" 
-                            borderRadius={16}
-                            chaos={0.08}
-                            speed={0.8}
+                        <TechCard 
+                            label={LABELS[idx]}
                         >
-                            <div className="relative rounded-2xl overflow-hidden bg-black">
-                                <Image 
-                                    src={src} 
-                                    alt={`Junaid photo ${idx + 1}`}
-                                    width={400} 
-                                    height={600} 
-                                    className="object-cover w-full h-[180px] md:h-[300px] hover:scale-110 transition-transform duration-700 opacity-80 hover:opacity-100"
-                                />
-                            </div>
-                        </ElectricBorder>
+                            <Image 
+                                src={src} 
+                                alt={`Junaid photo ${idx + 1}`}
+                                width={400} 
+                                height={600} 
+                                className="object-cover w-full h-[180px] md:h-[300px]"
+                            />
+                        </TechCard>
                     </motion.div>
                 ))}
             </div>
