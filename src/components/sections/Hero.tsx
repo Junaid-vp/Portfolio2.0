@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import DecryptedText from "@/components/ui/DecryptedText";
 import DotGrid from "@/components/ui/DotGrid";
+import ResumeButton from "@/components/ui/ResumeButton";
 import { useRef } from "react";
 
 export default function Hero() {
@@ -35,13 +36,15 @@ export default function Hero() {
         </div>
 
         <motion.p 
-          className="text-xs sm:text-sm md:text-xl text-muted-foreground max-w-2xl px-4"
+          className="text-xs sm:text-sm md:text-xl text-muted-foreground max-w-2xl px-4 mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           Building modern, user-friendly web applications with the MERN Stack.
         </motion.p>
+
+        <ResumeButton variant="hero" />
       </motion.div>
 
       {/* Scroll Indicator */}

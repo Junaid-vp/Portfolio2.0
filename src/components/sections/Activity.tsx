@@ -64,39 +64,50 @@ export default function Activity() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* GitHub Contributions Card */}
-          <div className="lg:col-span-2 p-8 bg-zinc-900/30 border border-white/5 rounded-3xl backdrop-blur-sm">
+          <div className="lg:col-span-2 p-8 bg-zinc-900/30 border border-white/5 rounded-3xl backdrop-blur-sm relative overflow-hidden group">
             <div className="flex items-center justify-between mb-10">
               <div className="flex items-center gap-4">
-                <Github className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-bold text-white">GitHub Calendar</h3>
+                <div className="p-2 bg-white/5 rounded-lg border border-white/10">
+                  <Github className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white uppercase tracking-tight">Code Rhythm</h3>
+                  <p className="text-[10px] font-mono text-zinc-500">GITHUB_ENGINE_V2.4</p>
+                </div>
               </div>
               <a 
                 href="https://github.com/Junaid-vp" 
                 target="_blank" 
-                className="text-xs font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+                className="p-2 bg-white/5 rounded-full border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-300"
               >
-                View Profile <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-4 h-4 text-white/40" />
               </a>
             </div>
 
-            <div className="w-full overflow-x-auto pb-4 scrollbar-hide">
-              <div className="min-w-[800px] flex justify-center">
+            {/* Responsive Calendar Wrapper: No Overflow Scroll */}
+            <div className="relative flex justify-center items-center py-4">
+              <div className="w-full scale-[0.6] sm:scale-[0.85] md:scale-100 origin-center">
                 <GitHubCalendar 
                   username="Junaid-vp"
-                  blockSize={12}
+                  blockSize={11}
                   blockMargin={4}
                   fontSize={12}
                   theme={{
                     light: ['#18181b', '#3b0764', '#581c87', '#7e22ce', '#a855f7'],
                     dark: ['#18181b', '#3b0764', '#581c87', '#7e22ce', '#a855f7'],
                   }}
+                  showWeekdayLabels
                 />
               </div>
             </div>
             
-            <p className="mt-6 text-sm text-zinc-500 font-mono italic">
-              // Consistent daily contributions across open-source and personal repositories.
-            </p>
+            <div className="mt-8 flex items-center justify-between text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+              <span>// 365_DAYS_SNAPSHOT</span>
+              <span className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+                Live_Metrics
+              </span>
+            </div>
           </div>
 
           {/* LeetCode Stats Card */}

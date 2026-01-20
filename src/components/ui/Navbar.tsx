@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { clsx } from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import ResumeButton from "./ResumeButton";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -63,7 +64,7 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-
+          <ResumeButton variant="nav" />
         </div>
 
         {/* Mobile Toggle */}
@@ -100,7 +101,7 @@ export default function Navbar() {
                         {item.name}
                     </a>
                 ))}
-
+                <ResumeButton variant="hero" className="mt-4" />
             </motion.div>
         )}
       </AnimatePresence>
