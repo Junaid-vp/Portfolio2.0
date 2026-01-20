@@ -35,18 +35,13 @@ export default function Skills() {
         <p className="text-[10px] sm:text-sm md:text-base text-zinc-400 mt-0 sm:mt-4 text-center font-medium relative z-20">Drag to rotate • Hover to explore</p>
       </div>
 
-      {/* Skills Footer Logo Loop */}
-      <div className="w-full relative z-30 mt-8 md:mt-16 border-y border-white/5 bg-black/40 backdrop-blur-xl py-6 md:py-10">
+      {/* Optimized Logo Loop */}
+      <div className="w-full relative z-30 mt-8 md:mt-16">
         <LogoLoop 
             logos={SKILLS_DATA}
-            speed={60}
-            direction="left"
-            logoHeight={45}
-            gap={60}
-            fadeOut={true}
-            pauseOnHover={true}
-            scaleOnHover={true}
-            ariaLabel="Technical Skills"
+            speed={50}
+            logoHeight={40}
+            gap={100}
         />
       </div>
     </section>
