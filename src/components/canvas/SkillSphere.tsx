@@ -50,7 +50,7 @@ function Word({ children, icon, position }: { children: string; icon: string; po
             <img 
                 src={`https://cdn.simpleicons.org/${icon}`} 
                 alt={children}
-                className={`w-10 h-10 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-md`}
+                className={`w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-md`}
             />
             <span className={`text-[10px] sm:text-sm md:text-lg font-bold tracking-wide ${hovered ? 'scale-105 text-white' : 'text-zinc-400'} transition-colors`}>
                 {children}
@@ -107,8 +107,8 @@ export default function SkillSphere() {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 640) { // Mobile
-        setRadius(12);
-        setCameraZ(40);
+        setRadius(15);
+        setCameraZ(38);
       } else if (width < 768) { // Tablet
         setRadius(16);
         setCameraZ(35);
@@ -126,7 +126,7 @@ export default function SkillSphere() {
   if (!mounted) return null;
 
   return (
-    <div className="h-[350px] sm:h-[450px] md:h-[600px] w-full cursor-move relative z-10">
+    <div className="h-[400px] sm:h-[450px] md:h-[600px] w-full cursor-move relative z-10">
       <Canvas 
         dpr={[1, 1.5]} 
         camera={{ position: [0, 0, cameraZ], fov: 50 }}

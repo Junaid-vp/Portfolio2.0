@@ -13,18 +13,16 @@ const SKILLS_LIST = [
 export default function Skills() {
   return (
     <section id="skills" className="min-h-screen flex flex-col items-center justify-center bg-transparent text-foreground py-8 md:py-20 overflow-hidden relative">
-      <div className="container mx-auto px-4 flex flex-col items-center flex-grow justify-center">
-        <div className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-10 text-center text-foreground relative z-30">
+      <div className="container mx-auto px-4 flex flex-col items-center flex-grow justify-center mt-12 md:mt-20">
+        <div className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-10 text-center text-foreground relative z-30">
              <DecryptedText 
                 text="TECH ARSENAL" 
                 className="font-black"
                 delay={0.10} 
              />
         </div>
-        <div className="w-full h-[350px] sm:h-[450px] md:h-[500px] relative z-10">
-            <SkillSphere />
-        </div>
-        <p className="text-[10px] sm:text-sm md:text-base text-black dark:text-zinc-400 mt-2 sm:mt-4 text-center font-medium relative z-20">Drag to rotate • Hover to explore</p>
+        <SkillSphere />
+        <p className="text-[10px] sm:text-sm md:text-base text-zinc-400 mt-0 sm:mt-4 text-center font-medium relative z-20">Drag to rotate • Hover to explore</p>
       </div>
 
       {/* Skills Footer Marquee */}
