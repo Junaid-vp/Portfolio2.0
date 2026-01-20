@@ -58,7 +58,6 @@ export default function RootLayout({
           </div>
           <SmoothScroll>
               <div className="relative z-10">
-                <CustomCursor />
                 <Navbar />
                 {children}
               </div>
