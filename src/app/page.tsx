@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
 
 const About = dynamic(() => import("@/components/sections/About"), { ssr: false });
+const Activity = dynamic(() => import("@/components/sections/Activity"), { ssr: false });
 const Skills = dynamic(() => import("@/components/sections/Skills"), { ssr: false });
 const Projects = dynamic(() => import("@/components/sections/Projects"), { ssr: false });
 const Experience = dynamic(() => import("@/components/sections/Experience"), { ssr: false });
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="w-full relative">
       <Hero />
       <About />
+      <Activity />
       <Skills />
       <Projects />
       <Experience />
