@@ -6,20 +6,20 @@ import { TrackballControls, Float, Html } from "@react-three/drei";
 import * as THREE from "three";
 
 const SKILLS = [
-  { name: "HTML", icon: "html5" },
-  { name: "JavaScript", icon: "javascript" },
-  { name: "React", icon: "react" },
-  { name: "Redux", icon: "redux" },
-  { name: "TypeScript", icon: "typescript" },
-  { name: "Next.js", icon: "nextdotjs" },
-  { name: "Tailwind CSS", icon: "tailwindcss" },
-  { name: "Bootstrap", icon: "bootstrap" },
-  { name: "Node.js", icon: "nodedotjs" },
-  { name: "Express.js", icon: "express" },
-  { name: "MongoDB", icon: "mongodb" },
-  { name: "Git", icon: "git" },
-  { name: "Postman", icon: "postman" },
-  { name: "Axios", icon: "axios" },
+  { name: "HTML", icon: "html5/E34F26" },
+  { name: "JavaScript", icon: "javascript/F7DF1E" },
+  { name: "React", icon: "react/61DAFB" },
+  { name: "Redux", icon: "redux/764ABC" },
+  { name: "TypeScript", icon: "typescript/3178C6" },
+  { name: "Next.js", icon: "nextdotjs/white" },
+  { name: "Tailwind CSS", icon: "tailwindcss/06B6D4" },
+  { name: "Bootstrap", icon: "bootstrap/7611F7" },
+  { name: "Node.js", icon: "nodedotjs/339933" },
+  { name: "Express.js", icon: "express/white" },
+  { name: "MongoDB", icon: "mongodb/47A248" },
+  { name: "Git", icon: "git/F05032" },
+  { name: "Postman", icon: "postman/FF6C37" },
+  { name: "Axios", icon: "axios/5A29E4" },
 ];
 
 function Word({ children, icon, position }: { children: string; icon: string; position: THREE.Vector3 }) {
@@ -42,7 +42,7 @@ function Word({ children, icon, position }: { children: string; icon: string; po
         <div 
             className={`
                 flex flex-col items-center justify-center gap-1 md:gap-2 cursor-pointer transition-transform duration-300 select-none
-                ${hovered ? 'scale-110 z-50' : ''}
+                ${hovered ? 'scale-125 z-50' : ''}
             `}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
@@ -50,7 +50,7 @@ function Word({ children, icon, position }: { children: string; icon: string; po
             <img 
                 src={`https://cdn.simpleicons.org/${icon}`} 
                 alt={children}
-                className={`w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-md`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-lg`}
             />
             <span className={`text-[10px] sm:text-sm md:text-lg font-bold tracking-wide ${hovered ? 'scale-105 text-white' : 'text-zinc-400'} transition-colors`}>
                 {children}

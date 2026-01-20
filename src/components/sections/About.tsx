@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import TextReveal from "@/components/ui/TextReveal";
+import ElectricBorder from "@/components/ui/ElectricBorder";
 
 const IMAGES = [
   "https://media.licdn.com/dms/image/v2/D5622AQF4xCW0HMsPIA/feedshare-shrink_800/B56Zs0yjOAG4Ag-/0/1766117233328?e=1770249600&v=beta&t=-mj1GiDyt5hDtxUS_P6LrfOYSj_AkvOw2VzQPR84P0A",
@@ -52,22 +53,32 @@ export default function About() {
             </div>
 
             {/* Walking/Working Grid */}
-            <div className="md:w-1/2 grid grid-cols-2 gap-3 md:gap-4">
+            <div className="md:w-1/2 grid grid-cols-2 gap-3 md:gap-4 lg:gap-8">
                 {IMAGES.map((src, idx) => (
                     <motion.div
                         key={idx}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
                         transition={{ delay: idx * 0.1, duration: 0.5 }}
-                        className={`relative rounded-xl md:rounded-2xl overflow-hidden ${idx % 2 === 0 ? "md:translate-y-8" : "md:-translate-y-8"}`}
+                        className={`relative ${idx % 2 === 0 ? "md:translate-y-8" : "md:-translate-y-8"}`}
                     >
-                        <Image 
-                            src={src} 
-                            alt={`Junaid photo ${idx + 1}`}
-                            width={400} 
-                            height={600} 
-                            className="object-cover w-full h-[180px] md:h-[300px] hover:scale-110 transition-transform duration-500"
-                        />
+                        <ElectricBorder 
+                            color="#9333ea" 
+                            borderRadius={16}
+                            chaos={0.08}
+                            speed={0.8}
+                        >
+                            <div className="relative rounded-2xl overflow-hidden bg-black">
+                                <Image 
+                                    src={src} 
+                                    alt={`Junaid photo ${idx + 1}`}
+                                    width={400} 
+                                    height={600} 
+                                    className="object-cover w-full h-[180px] md:h-[300px] hover:scale-110 transition-transform duration-700 opacity-80 hover:opacity-100"
+                                />
+                            </div>
+                        </ElectricBorder>
                     </motion.div>
                 ))}
             </div>

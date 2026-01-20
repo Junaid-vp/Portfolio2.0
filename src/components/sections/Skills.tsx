@@ -2,12 +2,22 @@
 
 import DecryptedText from "@/components/ui/DecryptedText";
 import SkillSphere from "@/components/canvas/SkillSphere";
+import LogoLoop from "@/components/ui/LogoLoop";
 
-
-const SKILLS_LIST = [
-  "HTML", "JavaScript", "React", "Redux", "TypeScript", "Next.js", 
-  "Tailwind CSS", "Bootstrap", "Node.js", "Express.js", "MongoDB", 
-  "Git", "Postman", "Axios"
+const SKILLS_DATA = [
+  { src: "https://cdn.simpleicons.org/html5/E34F26", title: "HTML5" },
+  { src: "https://cdn.simpleicons.org/javascript/F7DF1E", title: "JavaScript" },
+  { src: "https://cdn.simpleicons.org/react/61DAFB", title: "React" },
+  { src: "https://cdn.simpleicons.org/nextdotjs/white", title: "Next.js" },
+  { src: "https://cdn.simpleicons.org/typescript/3178C6", title: "TypeScript" },
+  { src: "https://cdn.simpleicons.org/tailwindcss/06B6D4", title: "Tailwind CSS" },
+  { src: "https://cdn.simpleicons.org/redux/764ABC", title: "Redux" },
+  { src: "https://cdn.simpleicons.org/nodedotjs/339933", title: "Node.js" },
+  { src: "https://cdn.simpleicons.org/express/white", title: "Express.js" },
+  { src: "https://cdn.simpleicons.org/mongodb/47A248", title: "MongoDB" },
+  { src: "https://cdn.simpleicons.org/git/F05032", title: "Git" },
+  { src: "https://cdn.simpleicons.org/postman/FF6C37", title: "Postman" },
+  { src: "https://cdn.simpleicons.org/axios/5A29E4", title: "Axios" },
 ];
 
 export default function Skills() {
@@ -25,31 +35,20 @@ export default function Skills() {
         <p className="text-[10px] sm:text-sm md:text-base text-zinc-400 mt-0 sm:mt-4 text-center font-medium relative z-20">Drag to rotate • Hover to explore</p>
       </div>
 
-      {/* Skills Footer Marquee */}
-      <div className="w-full relative z-30 mt-4 md:mt-10 border-t border-white/10 bg-black/20 backdrop-blur-sm py-3 md:py-6 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-            {[...SKILLS_LIST, ...SKILLS_LIST].map((skill, i) => (
-                <span key={i} className="text-xs sm:text-xl md:text-3xl font-bold text-white/50 mx-3 md:mx-8 uppercase tracking-widest hover:text-white transition-colors cursor-default">
-                    {skill}
-                </span>
-            ))}
-            {[...SKILLS_LIST, ...SKILLS_LIST].map((skill, i) => (
-                <span key={`dup-${i}`} className="text-xs sm:text-xl md:text-3xl font-bold text-white/50 mx-3 md:mx-8 uppercase tracking-widest hover:text-white transition-colors cursor-default">
-                    {skill}
-                </span>
-            ))}
-        </div>
+      {/* Skills Footer Logo Loop */}
+      <div className="w-full relative z-30 mt-8 md:mt-16 border-y border-white/5 bg-black/40 backdrop-blur-xl py-6 md:py-10">
+        <LogoLoop 
+            logos={SKILLS_DATA}
+            speed={60}
+            direction="left"
+            logoHeight={45}
+            gap={60}
+            fadeOut={true}
+            pauseOnHover={true}
+            scaleOnHover={true}
+            ariaLabel="Technical Skills"
+        />
       </div>
-      
-      <style jsx>{`
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            animation: marquee 30s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }
