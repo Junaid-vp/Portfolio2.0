@@ -13,13 +13,13 @@ export default function Hero() {
              <DecryptedText 
                 text="HI, I'M JUNAID" 
                 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter block" 
-                delay={0.2} 
+                delay={3.8} 
              />
              <div className="text-xl sm:text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 block mt-2">
                  <DecryptedText 
                     text="SOFTWARE ENGINEER" 
                     className=""
-                    delay={0.8}
+                    delay={4.4}
                  />
              </div>
         </div>

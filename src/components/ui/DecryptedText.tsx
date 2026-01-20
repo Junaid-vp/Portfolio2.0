@@ -14,7 +14,7 @@ interface DecryptedTextProps {
 export default function DecryptedText({ text, className, delay = 0 }: DecryptedTextProps) {
   const [displayText, setDisplayText] = useState("");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
   
   useEffect(() => {
     if (!isInView) return;

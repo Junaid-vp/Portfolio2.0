@@ -68,13 +68,14 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
-            className="md:hidden text-foreground relative z-50"
+            className="md:hidden relative z-50 p-2.5 rounded-xl bg-purple-600/20 backdrop-blur-md border border-purple-500/30 text-white shadow-[0_0_15px_rgba(168,85,247,0.2)]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Menu"
         >
-            <div className="space-y-2">
-                <span className={clsx("block w-8 h-0.5 bg-foreground transition-transform", mobileMenuOpen && "rotate-45 translate-y-2.5")}></span>
-                <span className={clsx("block w-8 h-0.5 bg-foreground transition-opacity", mobileMenuOpen && "opacity-0")}></span>
-                <span className={clsx("block w-8 h-0.5 bg-foreground transition-transform", mobileMenuOpen && "-rotate-45 -translate-y-2.5")}></span>
+            <div className="space-y-1.5">
+                <span className={clsx("block w-6 h-1 bg-white transition-transform duration-300", mobileMenuOpen && "rotate-45 translate-y-2.5")}></span>
+                <span className={clsx("block w-6 h-1 bg-white transition-opacity duration-300", mobileMenuOpen && "opacity-0")}></span>
+                <span className={clsx("block w-6 h-1 bg-white transition-transform duration-300", mobileMenuOpen && "-rotate-45 -translate-y-2.5")}></span>
             </div>
         </button>
       </motion.nav>

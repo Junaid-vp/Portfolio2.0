@@ -19,8 +19,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dev Portfolio | Creative Developer",
+  title: "Junaid-Software-Developer",
   description: "A visually shocking portfolio for a Junior MERN Stack Developer.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
