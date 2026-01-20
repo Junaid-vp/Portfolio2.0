@@ -80,10 +80,10 @@ export default function Experience() {
 
                     {/* Content Card with 3D Tilt Effect */}
                     <motion.div 
-                        initial={{ opacity: 0, y: 50, rotateX: -10 }}
-                        whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                        viewport={{ margin: "-100px" }}
-                        transition={{ duration: 0.8, delay: index * 0.1 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: "-50px" }}
+                        transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                         className="flex-1 pl-10 sm:pl-12 md:pl-0 md:w-1/2 perspective-1000"
                     >
                        <div className={`p-4 sm:p-8 bg-card/40 backdrop-blur-md border border-muted/20 rounded-2xl hover:border-purple-500/50 transition-all duration-500 hover:bg-card/80 group hover:translate-x-2 ${

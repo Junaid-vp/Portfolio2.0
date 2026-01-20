@@ -1,14 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import DecryptedText from "@/components/ui/DecryptedText";
 import DotGrid from "@/components/ui/DotGrid";
+import { useRef } from "react";
 
 export default function Hero() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
-    <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-transparent text-foreground">
+    <section id="hero" ref={containerRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-transparent text-foreground">
       {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 sm:px-4">
+      <motion.div style={{ y, opacity }} className="relative z-10 flex flex-col items-center justify-center text-center px-2 sm:px-4">
         <div className="mb-4">
              <DecryptedText 
                 text="HI, I'M JUNAID" 
@@ -32,7 +42,7 @@ export default function Hero() {
         >
           Building modern, user-friendly web applications with the MERN Stack.
         </motion.p>
-      </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div 

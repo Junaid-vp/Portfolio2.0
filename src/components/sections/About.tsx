@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import TextReveal from "@/components/ui/TextReveal";
 import TechCard from "@/components/ui/TechCard";
+import { useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const IMAGES = [
   "https://media.licdn.com/dms/image/v2/D5622AQF4xCW0HMsPIA/feedshare-shrink_800/B56Zs0yjOAG4Ag-/0/1766117233328?e=1770249600&v=beta&t=-mj1GiDyt5hDtxUS_P6LrfOYSj_AkvOw2VzQPR84P0A",
@@ -17,13 +19,22 @@ const IMAGES = [
 const LABELS = ["IMG_01", "IMG_02", "IMG_03", "IMG_04", "IMG_05", "IMG_06"];
 
 export default function About() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -50]);
+
   return (
-    <section id="about" className="min-h-screen bg-transparent text-foreground py-12 md:py-20">
+    <section id="about" ref={containerRef} className="min-h-screen bg-transparent text-foreground py-12 md:py-20">
       <div className="container mx-auto px-4">
         
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             {/* Text Content */}
-            <div className="md:w-1/2 space-y-6 md:space-y-8">
+            <motion.div style={{ y: y1 }} className="md:w-1/2 space-y-6 md:space-y-8">
                 <div className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight">
                     <TextReveal className="block" delay={0.1}>CODE.</TextReveal>
                     <TextReveal className="block" delay={0.3}>CREATE.</TextReveal>
@@ -52,10 +63,10 @@ export default function About() {
                         </p>
                     </div>
                 </motion.div>
-            </div>
+            </motion.div>
 
             {/* Walking/Working Grid */}
-            <div className="md:w-1/2 grid grid-cols-2 gap-3 md:gap-4 lg:gap-8">
+            <motion.div style={{ y: y2 }} className="md:w-1/2 grid grid-cols-2 gap-3 md:gap-4 lg:gap-8">
                 {IMAGES.map((src, idx) => (
                     <motion.div
                         key={idx}
@@ -78,7 +89,7 @@ export default function About() {
                         </TechCard>
                     </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
 
       </div>

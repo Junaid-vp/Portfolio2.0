@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 
 const projects = [
@@ -59,24 +59,13 @@ export default function Projects() {
     target: targetRef,
   });
 
-  // Bridge: Horizontal wheel/trackpad swipes drive vertical scroll (which drives the horizontal animation)
-  useEffect(() => {
-    const section = targetRef.current;
-    if (!section) return;
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
-    const handleWheel = (e: WheelEvent) => {
-      // Only intercept when horizontal scroll is dominant
-      if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 5) {
-        e.preventDefault();
-        window.scrollBy({ top: e.deltaX, behavior: "auto" });
-      }
-    };
-
-    section.addEventListener("wheel", handleWheel, { passive: false });
-    return () => section.removeEventListener("wheel", handleWheel);
-  }, []);
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(smoothProgress, [0, 1], ["1%", "-95%"]);
 
   return (
     <section id="projects" ref={targetRef} className="relative md:h-[300vh] min-h-screen bg-transparent">

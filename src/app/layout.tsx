@@ -7,6 +7,7 @@ import CustomCursor from "@/components/ui/CustomCursor";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import DotGrid from "@/components/ui/DotGrid";
 import Preloader from "@/components/ui/Preloader";
+import ScrollIndicator from "@/components/ui/ScrollIndicator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Preloader />
+          <ScrollIndicator />
           <div className="fixed inset-0 z-0 pointer-events-none">
             <DotGrid 
                 dotSize={3} 

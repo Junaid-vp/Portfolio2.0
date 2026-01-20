@@ -95,6 +95,48 @@ export default function TechCard({ children, className, label = "DATA_ENTRY" }: 
         </div>
 
         {/* HUD Elements */}
+        {!isHovered && (
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="absolute inset-0 z-30 flex flex-col items-center justify-center pointer-events-none"
+            >
+                <motion.div
+                    animate={{ 
+                        scale: [1, 1.1, 1],
+                        opacity: [0.4, 0.8, 0.4]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="flex flex-col items-center gap-2"
+                >
+                    <div className="w-12 h-12 rounded-full border border-purple-500/50 flex items-center justify-center bg-purple-500/10 backdrop-blur-sm">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400">
+                            <path d="M12 2a10 10 0 0 0-10 10c0 5.523 4.477 10 10 10s10-4.477 10-10A10 10 0 0 0 12 2z"/>
+                            <path d="M12 6v6"/>
+                            <path d="M12 16v.01"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <span className="text-[10px] font-mono text-purple-400 tracking-[0.2em] font-bold uppercase drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]">
+                        Touch to Reveal
+                    </span>
+                </motion.div>
+            </motion.div>
+        )}
+
+        {!isHovered && (
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0.2, 0.5, 0.2] }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="absolute bottom-4 right-4 z-20"
+            >
+                <div className="text-[8px] font-mono text-purple-500/60 uppercase tracking-tighter">
+                   Status: Locked_Data
+                </div>
+            </motion.div>
+        )}
+
         {isHovered && (
             <motion.div 
                 initial={{ opacity: 0 }}
@@ -113,7 +155,7 @@ export default function TechCard({ children, className, label = "DATA_ENTRY" }: 
             className="relative h-full w-full overflow-hidden rounded-xl bg-black"
             style={{ transform: "translateZ(20px)" }}
         >
-            <div className={`transition-all duration-700 ${isHovered ? 'scale-110' : 'scale-100 grayscale hover:grayscale-0'}`}>
+            <div className={`transition-all duration-700 ${isHovered ? 'scale-110 blur-0 grayscale-0' : 'scale-100 grayscale-[0.85] blur-[1px] opacity-70'}`}>
                 {children}
             </div>
             
