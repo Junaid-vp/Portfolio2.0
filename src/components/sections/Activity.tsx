@@ -31,13 +31,33 @@ export default function Activity() {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   useEffect(() => {
-    fetch("https://leetcode-stats-api.herokuapp.com/Mohammed-Junaid")
-      .then(res => res.json())
-      .then(data => {
-        if (data.status === "success") setLcData(data);
+    const fetchStats = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch("https://leetcode-api-faisalshohag.vercel.app/Mohammed-Junaid");
+        const data = await res.json();
+        if (data && data.totalSolved !== undefined) {
+          setLcData({
+            totalSolved: data.totalSolved,
+            totalQuestions: data.totalQuestions,
+            easySolved: data.easySolved,
+            totalEasy: data.totalEasy,
+            mediumSolved: data.mediumSolved,
+            totalMedium: data.totalMedium,
+            hardSolved: data.hardSolved,
+            totalHard: data.totalHard,
+            ranking: data.ranking,
+            acceptanceRate: Number(( (data.totalSolved / (data.totalQuestions || 1)) * 100).toFixed(1))
+          });
+        }
+      } catch (error) {
+        console.error("LeetCode fetch error:", error);
+      } finally {
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      }
+    };
+
+    fetchStats();
   }, []);
 
   const leetcodeStats = lcData ? [
@@ -124,7 +144,7 @@ export default function Activity() {
                     <div key={i} className="h-12 bg-white/5 rounded-xl animate-pulse" />
                   ))}
                 </div>
-              ) : (
+              ) : lcData ? (
                 <div className="space-y-8">
                   <div className="flex justify-between items-end mb-2">
                     <span className="text-sm font-bold text-white">Total Solved</span>
@@ -149,6 +169,16 @@ export default function Activity() {
                       </div>
                     ))}
                   </div>
+                </div>
+              ) : (
+                <div className="py-10 text-center space-y-4">
+                  <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Logic_Link_Offline</p>
+                  <button 
+                    onClick={() => window.location.reload()}
+                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-white hover:bg-white/10 transition-all"
+                  >
+                    Reconnect_System
+                  </button>
                 </div>
               )}
             </div>
