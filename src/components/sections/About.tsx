@@ -8,12 +8,12 @@ import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const IMAGES = [
-  "https://media.licdn.com/dms/image/v2/D5622AQF4xCW0HMsPIA/feedshare-shrink_800/B56Zs0yjOAG4Ag-/0/1766117233328?e=1770249600&v=beta&t=-mj1GiDyt5hDtxUS_P6LrfOYSj_AkvOw2VzQPR84P0A",
-  "https://media.licdn.com/dms/image/v2/D5622AQE3t53QYPodww/feedshare-shrink_800/B56ZsRJla7G4Ag-/0/1765519287761?e=1770249600&v=beta&t=U_oduD_iOyx96PGjXaqeIs5UMLksJyH8oH4HIdx-Npc",
-  "https://media.licdn.com/dms/image/v2/D5622AQGeiyMkXY2tyA/feedshare-shrink_800/B56ZrtfQuYLoAg-/0/1764920990272?e=1770249600&v=beta&t=SyKfJou03kxV2vvH5Ao01XI-HQp88dKeiU1skHdMOzc",
-  "https://media.licdn.com/dms/image/v2/D4E22AQGtDQC58xyQbg/feedshare-shrink_800/B4EZp3TftRKkAg-/0/1762938200214?e=1770249600&v=beta&t=GBWM5n9EcwWpoyfAZScOrDclIex8XKzxLWo605-iyuk",
-  "https://media.licdn.com/dms/image/v2/D4E22AQHAX1M9JKXOAA/feedshare-shrink_800/B4EZmTtJydIIAg-/0/1759119718202?e=1770249600&v=beta&t=Vx1Xa0c41n2c52TNcmpJqmLT-Cachh2EN0Z9QxLDCF8",
-  "https://media.licdn.com/dms/image/v2/D4E22AQEALyOvYpUo7w/feedshare-shrink_800/B4EZloMQmhHgAg-/0/1758389673959?e=1770249600&v=beta&t=Jdiz1v4Dy9bhAotdCGNnV3Fuw-AyetufcNS83C8Ie64"
+  "https://media.licdn.com/dms/image/v2/D4E22AQEALyOvYpUo7w/feedshare-shrink_1280/B4EZloMQmhHgAs-/0/1758389674825?e=1772668800&v=beta&t=jn2j26i8S6v9UR_lnERS3G-qMOlDZRECm359QCcrHbU",
+  "https://media.licdn.com/dms/image/v2/D4E22AQHAX1M9JKXOAA/feedshare-shrink_1280/B4EZmTtJydIIAs-/0/1759119717782?e=1772668800&v=beta&t=pA9K3ZlSYieFSVD2-_9cL3fAxW_ov0xZ7z4isoZcCXc",
+  "https://media.licdn.com/dms/image/v2/D4E22AQFVbUuDO9qxfQ/feedshare-shrink_800/B4EZpfAEcEJgAk-/0/1762530453578?e=1772668800&v=beta&t=QwRSw4YtMakiJSGvSv1VjBxWekdaZS0Arw1pcvmn_-o",
+  "https://media.licdn.com/dms/image/v2/D4E22AQGtDQC58xyQbg/feedshare-shrink_1280/B4EZp3TftRKkAs-/0/1762938201128?e=1772668800&v=beta&t=_e-OUiF9RJSk4gjLTSP1xLEItshLXu60Vd1teGakvjM",
+  "https://media.licdn.com/dms/image/v2/D5622AQGeiyMkXY2tyA/feedshare-shrink_1280/B56ZrtfQuYLoAs-/0/1764920991471?e=1772668800&v=beta&t=gMeLdTkKWzZ9uKNBKD2WOn8Q_IwwbWUtxBjnenR-5yc",
+  "https://media.licdn.com/dms/image/v2/D5622AQF4xCW0HMsPIA/feedshare-shrink_800/B56Zs0yjOAG4Ag-/0/1766117233328?e=1772668800&v=beta&t=JQDYEc79FKFfgc3J1aW-_NCZGNNXz-lNwuPvy6op25w"
 ];
 
 const LABELS = ["IMG_01", "IMG_02", "IMG_03", "IMG_04", "IMG_05", "IMG_06"];

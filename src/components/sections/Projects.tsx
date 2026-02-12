@@ -9,10 +9,10 @@ const projects = [
     id: 1,
     title: "E-COMMERCE APP",
     category: "Full Stack React",
-    description: "A modern shopping platform with UseContext state management, cart functionality, and seamless checkout flow.",
+    description: "A Modern Full-Stack E-Commerce Platform Built with React, Node.js, Express, and MongoDB",
     color: "#7000df",
-    image: "https://junaid-portfolio-devvv.vercel.app/Screenshot%202025-12-26%20at%204.26.32%E2%80%AFPM.jpeg",
-    link: "https://miraggiolife.vercel.app/"
+    image: "https://media.licdn.com/dms/image/v2/D5622AQH7Oz9TPnikJw/feedshare-shrink_800/B56Zwpp5GcIsAk-/0/1770225374530?e=1772668800&v=beta&t=imcgYu218Lkdc3-CVZ0M2Hb2oE_Go5OMni046aQv3Zo",
+    link: "https://feather-mound.vercel.app/"
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const projects = [
     category: "Next.js",
     description: "This project is a modern personal portfolio website built using Next.js, TypeScript, Tailwind CSS, and HTML, with a strong focus on understanding Next.js routing, error handling, loading states, and page-level metadata.",
     color: "#ff8c00",
-    image: "https://media.licdn.com/dms/image/v2/D5622AQEXGY70Zqwwqw/feedshare-shrink_800/B56ZtttxsNGwAg-/0/1767072276412?e=1770249600&v=beta&t=nxbIaK_Vz9BihIve-w-J9Z_wACcR1eP0uwyYIST1sDY",
+    image: "https://media.licdn.com/dms/image/v2/D5622AQEXGY70Zqwwqw/feedshare-shrink_800/B56ZtttxsNGwAg-/0/1767072276412?e=1772668800&v=beta&t=ji4b0yWKjuG8sX0utaWdNHAjaNGKIazdrSITDa9r4Hw",
     link: "https://lnkd.in/gJp38vXj"
   }
 ];
