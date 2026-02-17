@@ -8,12 +8,12 @@ import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const IMAGES = [
-  "https://media.licdn.com/dms/image/v2/D4E22AQEALyOvYpUo7w/feedshare-shrink_1280/B4EZloMQmhHgAs-/0/1758389674825?e=1772668800&v=beta&t=jn2j26i8S6v9UR_lnERS3G-qMOlDZRECm359QCcrHbU",
-  "https://media.licdn.com/dms/image/v2/D4E22AQHAX1M9JKXOAA/feedshare-shrink_1280/B4EZmTtJydIIAs-/0/1759119717782?e=1772668800&v=beta&t=pA9K3ZlSYieFSVD2-_9cL3fAxW_ov0xZ7z4isoZcCXc",
-  "https://media.licdn.com/dms/image/v2/D4E22AQFVbUuDO9qxfQ/feedshare-shrink_800/B4EZpfAEcEJgAk-/0/1762530453578?e=1772668800&v=beta&t=QwRSw4YtMakiJSGvSv1VjBxWekdaZS0Arw1pcvmn_-o",
-  "https://media.licdn.com/dms/image/v2/D4E22AQGtDQC58xyQbg/feedshare-shrink_1280/B4EZp3TftRKkAs-/0/1762938201128?e=1772668800&v=beta&t=_e-OUiF9RJSk4gjLTSP1xLEItshLXu60Vd1teGakvjM",
-  "https://media.licdn.com/dms/image/v2/D5622AQGeiyMkXY2tyA/feedshare-shrink_1280/B56ZrtfQuYLoAs-/0/1764920991471?e=1772668800&v=beta&t=gMeLdTkKWzZ9uKNBKD2WOn8Q_IwwbWUtxBjnenR-5yc",
-  "https://media.licdn.com/dms/image/v2/D5622AQF4xCW0HMsPIA/feedshare-shrink_800/B56Zs0yjOAG4Ag-/0/1766117233328?e=1772668800&v=beta&t=JQDYEc79FKFfgc3J1aW-_NCZGNNXz-lNwuPvy6op25w"
+  "/About/1758389673959.jpeg",
+  "/About/1759119717782.jpeg",
+  "/About/1762530453578.jpeg",
+  "/About/1762938201128.jpeg",
+  "/About/1764920991471.jpeg",
+  "/About/1766117233328.jpeg"
 ];
 
 const LABELS = ["IMG_01", "IMG_02", "IMG_03", "IMG_04", "IMG_05", "IMG_06"];

@@ -11,7 +11,7 @@ const projects = [
     category: "Full Stack React",
     description: "A Modern Full-Stack E-Commerce Platform Built with React, Node.js, Express, and MongoDB",
     color: "#7000df",
-    image: "https://media.licdn.com/dms/image/v2/D5622AQH7Oz9TPnikJw/feedshare-shrink_800/B56Zwpp5GcIsAk-/0/1770225374530?e=1772668800&v=beta&t=imcgYu218Lkdc3-CVZ0M2Hb2oE_Go5OMni046aQv3Zo",
+    image: "/Project/1770225374529.jpeg",
     link: "https://feather-mound.vercel.app/"
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     category: "React Application",
     description: "Advanced calculator with memory functions and theme switching, built with React & Tailwind.",
     color: "#00bac5",
-    image: "https://junaid-portfolio-devvv.vercel.app/Image%2010-12-25%20at%207.26%E2%80%AFPM.jpeg",
+    image: "/Project/Image 10-12-25 at 7.26 PM.jpeg",
     link: "https://neocalc-calculator.vercel.app/"
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     category: "UI Engineering",
     description: "Pixel-perfect clone of the travel booking interface using advanced CSS and responsive design patterns.",
     color: "#ff0080",
-    image: "https://junaid-portfolio-devvv.vercel.app/Screenshot%202025-09-03%20at%209.18.03%E2%80%AFPM.png",
+    image: "/Project/Screenshot 2025-09-19 at 7.00.42 PM.png",
     link: "#"
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     category: "Web Design",
     description: "My previous personal website showcasing early frontend skills with Bootstrap and HTML5.",
     color: "#ffffff",
-    image: "https://junaid-portfolio-devvv.vercel.app/C7F29AA3-3C67-4A26-BB9F-DB10158FCD6C_1_201_a.jpeg",
+    image: "/Project/C7F29AA3-3C67-4A26-BB9F-DB10158FCD6C_1_105_c.jpeg",
     link: "https://junaid-vp.github.io/Portfolio-Project/"
   },
   {
@@ -47,8 +47,8 @@ const projects = [
     category: "Next.js",
     description: "This project is a modern personal portfolio website built using Next.js, TypeScript, Tailwind CSS, and HTML, with a strong focus on understanding Next.js routing, error handling, loading states, and page-level metadata.",
     color: "#ff8c00",
-    image: "https://media.licdn.com/dms/image/v2/D5622AQEXGY70Zqwwqw/feedshare-shrink_800/B56ZtttxsNGwAg-/0/1767072276412?e=1772668800&v=beta&t=ji4b0yWKjuG8sX0utaWdNHAjaNGKIazdrSITDa9r4Hw",
-    link: "https://lnkd.in/gJp38vXj"
+    image: "/Project/1767072276553.jpeg",
+    link: "https://junaid-portfolio-devvv.vercel.app/"
   }
 ];
 

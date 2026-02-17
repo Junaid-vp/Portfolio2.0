@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Junaid-Software-Developer",
   description: "A visually shocking portfolio for a Junior MERN Stack Developer.",
   icons: {
-    icon: "/logo.png",
+    icon: "/924673b2-e843-4420-957f-ab5ad187b441.png",
   },
 };
 
