@@ -52,7 +52,9 @@ export default function About() {
                         My journey started in Bio Science, but my curiosity for technology led me to the world of web development.
                     </p>
                     <p>
-                        I specialize in the <span className="text-foreground">MERN Stack</span> (MongoDB, Express, React, Node.js) and ecosystem tools like Next.js, Redux, and Tailwind CSS.
+                        I specialize in building full-stack, production-grade applications using the{" "}
+                        <span className="text-foreground">MERN Stack</span>, Next.js, TypeScript, and modern DevOps tools like Docker, AWS, and GitHub Actions.
+                        I've shipped AI-driven SaaS products end-to-end — from WebRTC real-time video to Groq AI integration and CI/CD pipelines.
                         My goal is to build scalable, user-friendly applications that solve real-world problems.
                     </p>
                     

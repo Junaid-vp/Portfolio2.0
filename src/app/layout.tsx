@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import Navbar from "@/components/ui/Navbar";
-import CustomCursor from "@/components/ui/CustomCursor";
+import SplashCursor from "@/components/ui/SplashCursor";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import DotGrid from "@/components/ui/DotGrid";
 import Preloader from "@/components/ui/Preloader";
@@ -45,7 +45,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Preloader />
-          <CustomCursor />
+          <SplashCursor />
           <ScrollIndicator />
           <div className="fixed inset-0 z-0 pointer-events-none">
             <DotGrid 

@@ -7,6 +7,15 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
+    title: "SKILLFORGE AI",
+    category: "AI SaaS · Full Stack",
+    description: "An AI-powered Technical Interview Operating System. Real-time WebRTC video rooms, Groq AI question generation & evaluation, 3-layer MediaPipe proctoring, Monaco code editor, take-home task AI review, and a full production deployment on AWS with Docker and GitHub Actions CI/CD.",
+    color: "#7c3aed",
+    image: "/Project/Screenshot 2026-04-26 at 4.02.04 PM.jpg",
+    link: "https://www.skillforge-ai.com"
+  },
+  {
+    id: 2,
     title: "E-COMMERCE APP",
     category: "Full Stack React",
     description: "A Modern Full-Stack E-Commerce Platform Built with React, Node.js, Express, and MongoDB",
@@ -15,7 +24,7 @@ const projects = [
     link: "https://feather-mound.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "NEO CALC",
     category: "React Application",
     description: "Advanced calculator with memory functions and theme switching, built with React & Tailwind.",
@@ -24,7 +33,7 @@ const projects = [
     link: "https://neocalc-calculator.vercel.app/"
   },
   {
-    id: 3,
+    id: 4,
     title: "MAKEMYTRIP CLONE",
     category: "UI Engineering",
     description: "Pixel-perfect clone of the travel booking interface using advanced CSS and responsive design patterns.",
@@ -33,7 +42,7 @@ const projects = [
     link: "#"
   },
   {
-    id: 4,
+    id: 5,
     title: "LEGACY PORTFOLIO",
     category: "Web Design",
     description: "My previous personal website showcasing early frontend skills with Bootstrap and HTML5.",
@@ -42,10 +51,10 @@ const projects = [
     link: "https://junaid-vp.github.io/Portfolio-Project/"
   },
   {
-    id: 5,
-    title: "ClASSIC PORTFOLIO ",
+    id: 6,
+    title: "CLASSIC PORTFOLIO",
     category: "Next.js",
-    description: "This project is a modern personal portfolio website built using Next.js, TypeScript, Tailwind CSS, and HTML, with a strong focus on understanding Next.js routing, error handling, loading states, and page-level metadata.",
+    description: "A modern personal portfolio website built using Next.js, TypeScript, Tailwind CSS, and HTML, with a strong focus on understanding Next.js routing, error handling, loading states, and page-level metadata.",
     color: "#ff8c00",
     image: "/Project/1767072276553.jpeg",
     link: "https://junaid-portfolio-devvv.vercel.app/"

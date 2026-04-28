@@ -13,13 +13,23 @@ const SKILLS = [
   { name: "TypeScript", icon: "typescript/3178C6" },
   { name: "Next.js", icon: "nextdotjs/white" },
   { name: "Tailwind CSS", icon: "tailwindcss/06B6D4" },
-  { name: "Bootstrap", icon: "bootstrap/7611F7" },
   { name: "Node.js", icon: "nodedotjs/339933" },
   { name: "Express.js", icon: "express/white" },
   { name: "MongoDB", icon: "mongodb/47A248" },
+  { name: "PostgreSQL", icon: "postgresql/4169E1" },
+  { name: "Prisma", icon: "prisma/white" },
+  { name: "Redis", icon: "redis/DC382D" },
+  { name: "RabbitMQ", icon: "rabbitmq/FF6600" },
+  { name: "Socket.io", icon: "socketdotio/white" },
+  { name: "WebRTC", icon: "webrtc/333333" },
+  { name: "Docker", icon: "docker/2496ED" },
+  { name: "AWS", icon: "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
+  { name: "Nginx", icon: "nginx/009639" },
+  { name: "GitHub Actions", icon: "githubactions/2088FF" },
+  { name: "Stripe", icon: "stripe/635BFF" },
   { name: "Git", icon: "git/F05032" },
   { name: "Postman", icon: "postman/FF6C37" },
-  { name: "Axios", icon: "axios/5A29E4" },
+  { name: "Mongoose", icon: "mongoose/880000" },
 ];
 
 function Word({ children, icon, position }: { children: string; icon: string; position: THREE.Vector3 }) {
@@ -48,7 +58,7 @@ function Word({ children, icon, position }: { children: string; icon: string; po
             onMouseLeave={() => setHovered(false)}
         >
             <img 
-                src={`https://cdn.simpleicons.org/${icon}`} 
+                src={icon.startsWith('http') ? icon : `https://cdn.simpleicons.org/${icon}`} 
                 alt={children}
                 className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 object-contain filter drop-shadow-lg"
             />

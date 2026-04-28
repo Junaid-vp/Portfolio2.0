@@ -15,9 +15,20 @@ const SKILLS_DATA = [
   { src: "https://cdn.simpleicons.org/nodedotjs/339933", title: "Node.js" },
   { src: "https://cdn.simpleicons.org/express/white", title: "Express.js" },
   { src: "https://cdn.simpleicons.org/mongodb/47A248", title: "MongoDB" },
+  { src: "https://cdn.simpleicons.org/postgresql/4169E1", title: "PostgreSQL" },
+  { src: "https://cdn.simpleicons.org/prisma/white", title: "Prisma" },
+  { src: "https://cdn.simpleicons.org/redis/DC382D", title: "Redis" },
+  { src: "https://cdn.simpleicons.org/rabbitmq/FF6600", title: "RabbitMQ" },
+  { src: "https://cdn.simpleicons.org/socketdotio/white", title: "Socket.io" },
+  { src: "https://cdn.simpleicons.org/webrtc/333333", title: "WebRTC" },
+  { src: "https://cdn.simpleicons.org/docker/2496ED", title: "Docker" },
+  { src: "https://cdn.worldvectorlogo.com/logos/aws-2.svg", title: "AWS" },
+  { src: "https://cdn.simpleicons.org/nginx/009639", title: "Nginx" },
+  { src: "https://cdn.simpleicons.org/githubactions/2088FF", title: "GitHub Actions" },
+  { src: "https://cdn.simpleicons.org/stripe/635BFF", title: "Stripe" },
   { src: "https://cdn.simpleicons.org/git/F05032", title: "Git" },
   { src: "https://cdn.simpleicons.org/postman/FF6C37", title: "Postman" },
-  { src: "https://cdn.simpleicons.org/axios/5A29E4", title: "Axios" },
+  { src: "https://cdn.simpleicons.org/mongoose/880000", title: "Mongoose" },
 ];
 
 export default function Skills() {
